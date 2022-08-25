@@ -2,7 +2,7 @@ import React from 'react'
 import SingleMovie from '../SingleMovie/SingleMovie.js'
 import './MoviesBox.css'
 
-const MoviesBox = ({movies}) => {
+const MoviesBox = ({movies, method}) => {
 
     const singleMovieCards = movies.movies.map(movie => {
       return(
@@ -14,6 +14,7 @@ const MoviesBox = ({movies}) => {
           release_date={movie.release_date}
           id={movie.id}
           key={movie.id}
+          method={method}
           />
       )
     })
