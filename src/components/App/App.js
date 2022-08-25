@@ -13,11 +13,18 @@ class App extends Component {
         }
     }
 
+    testMethod() {
+        console.log('tomat')
+    }
+
     render() {
         return (
             <div className='main'>
-                <h1> tomatillos rancios </h1>
-                <MoviesBox movies={this.state.movies} />
+                <h1> 🍅 Bienvenidos a Tomatillos Rancios! 🍅 </h1>
+                <MoviesBox 
+                    movies={this.state.movies} 
+                    method={this.testMethod}
+                />
             </div>
         )
     }
