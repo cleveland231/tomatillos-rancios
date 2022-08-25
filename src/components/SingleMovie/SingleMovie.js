@@ -1,13 +1,13 @@
 import React from 'react';
-import './singleMovie.css';
+import './SingleMovie.css';
 
 const singleMovie = ({poster_path, backdrop_path, title, average_rating, release_date}) => {
     return (
-        <div className='singleMovie'>
-            <img> {poster_path} </img>
-            <img> {backdrop_path} </img>
+        <div className='single-movie'>
+            <img className='poster' src={poster_path} />
+            <img className='backdrop' src={backdrop_path} />
             <h3> {title} </h3>
-            <p> {average_rating} </p>
+            <p> {parseFloat(average_rating.toFixed(2))} </p>
             <p> {release_date} </p>
         </div>
     )
