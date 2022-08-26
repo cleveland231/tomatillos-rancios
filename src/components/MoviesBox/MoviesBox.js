@@ -1,12 +1,12 @@
 import React from 'react'
-import SingleMovie from '../SingleMovie/SingleMovie.js'
+import MovieCard from '../MovieCard/MovieCard.js'
 import './MoviesBox.css'
 
 const MoviesBox = ({movies, method}) => {
 
     const singleMovieCards = movies.movies.map(movie => {
-      return(
-        <SingleMovie className='single-movie'
+      return (
+        <MovieCard className='single-movie'
           poster_path={movie.poster_path}
           backdrop_path={movie.backdrop_path}
           title={movie.title}
@@ -18,8 +18,6 @@ const MoviesBox = ({movies, method}) => {
           />
       )
     })
-
-    console.log(movies)
 
     return (
       <div className='movies-box'>
