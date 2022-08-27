@@ -3,8 +3,8 @@ import MovieCard from '../MovieCard/MovieCard.js'
 import './MoviesBox.css'
 
 const MoviesBox = ({movies, method}) => {
-
-    const singleMovieCards = movies.movies.map(movie => {
+console.log('mo', movies)
+    const singleMovieCards = movies.map(movie => {
       return (
         <MovieCard className='single-movie'
           poster_path={movie.poster_path}
