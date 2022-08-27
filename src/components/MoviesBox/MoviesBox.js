@@ -3,7 +3,6 @@ import MovieCard from '../MovieCard/MovieCard.js'
 import './MoviesBox.css'
 
 const MoviesBox = ({movies, method}) => {
-console.log('mo', movies)
     const singleMovieCards = movies.map(movie => {
       return (
         <MovieCard className='single-movie'
@@ -16,7 +15,7 @@ console.log('mo', movies)
           key={movie.id}
           method={method}
           />
-      )
+        )
     })
 
     return (

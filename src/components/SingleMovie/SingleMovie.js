@@ -2,7 +2,6 @@ import React from 'react';
 import './SingleMovie.css';
 
 const singleMovie = ({movie, method}) => {
-  console.log(movie)
   return (
     <div className='movie-view-container' style={{backgroundImage: `url(${movie.backdrop_path})`}}>
       <div className='movie-view-box'>
@@ -12,9 +11,8 @@ const singleMovie = ({movie, method}) => {
           <p className='text'>Release Date: {movie.release_date}</p>
           <button onClick={event => method(event)} >Home</button>
         </div>
-        <img className='movie-poster' src={movie.poster_path}/>
+        <img className='movie-poster' alt={movie.title} src={movie.poster_path}/>
       </div>
-
     </div>
   )
 }
