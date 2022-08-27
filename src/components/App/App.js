@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import movieData from './movieData';
+// import movieData from './movieData';
 import SingleMovie from '../SingleMovie/SingleMovie.js';
 import './App.css'
 import MoviesBox from '../MoviesBox/MoviesBox';
 import '../MoviesBox/MoviesBox.css'
 import fetchApiData from './api-calls';
+
+let movieData;
 
 class App extends Component {
     constructor() {
@@ -20,7 +22,8 @@ class App extends Component {
     componentDidMount = () => {
         fetchApiData()
             .then(data => {
-            this.setState({movies: data.movies})
+                movieData = data.movies
+            this.setState({movies: movieData})
             })
             .catch(err => console.log(err))
     }
@@ -30,14 +33,14 @@ class App extends Component {
       let parsedID = parseInt(event.target.id);
       let selectedMovie = this.state.movies.find(movie => movie.id === parsedID)
 
-      this.setState({ movies: movieData.movies,
+      this.setState({ movies: movieData,
       singleMovieView: true,
       selectedMovie: selectedMovie })
     }
 
     goHome = (event) => {
         event.preventDefault();
-        this.setState({ movies: movieData.movies,
+        this.setState({ movies: movieData,
         singleMovieView: false })
     }
 
