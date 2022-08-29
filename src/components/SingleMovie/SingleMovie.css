@@ -39,7 +39,10 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
-button {
+.home-link {
+  color: black;
+}
+/* button {
   padding: 5px 50px;
   border-radius: 5px;
   font-size: medium;
@@ -50,4 +53,4 @@ button {
 button:active {
   box-shadow: none;
   transform: translateY(5px);
-}
+} */
