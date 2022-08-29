@@ -4,8 +4,8 @@ import MoviesBox from '../MoviesBox/MoviesBox';
 import './App.css'
 import '../MoviesBox/MoviesBox.css'
 import fetchApiData from './api-calls';
+import {Route, Switch} from 'react-router-dom'
 
-let movieData;
 
 class App extends Component {
     constructor() {
@@ -21,38 +21,23 @@ class App extends Component {
     componentDidMount = () => {
       fetchApiData()
       .then(data => {
-          movieData = data.movies;
-          this.setState({movies: movieData})
+          this.setState({movies: data.movies})
       })
       .catch(err => console.log(err))
-    }
-
-    seeMovie = event => {
-      event.preventDefault();
-      let parsedID = parseInt(event.target.id);
-      let selectedMovie = this.state.movies.find(movie => movie.id === parsedID)
-      this.setState({
-         movies: movieData,
-         singleMovieView: true,
-         selectedMovie: selectedMovie
-      })
-    }
-
-    goHome = (event) => {
-        event.preventDefault();
-        this.setState({
-          movies: movieData,
-          singleMovieView: false,
-          selectedMovie: null
-      })
     }
 
     render() {
         return (
             <div className='main'>
                 <h1> 🍅 Bienvenidos a Tomatillos Rancios! 🍅 </h1>
-                {!this.state.singleMovieView  && <MoviesBox movies={this.state.movies} method={this.seeMovie}/>}
-                {this.state.singleMovieView && <SingleMovie movie={this.state.selectedMovie} method={this.goHome} />}
+                <Switch>
+                  <Route exact path='/' render={() => <MoviesBox movies={this.state.movies}/>}/>
+                  <Route exact path='/movies/:id' render={({match}) => {
+                    const selectedMovie = this.state.movies.find(movie => movie.id === parseInt(match.params.id))
+                    return <SingleMovie movie={selectedMovie}/>
+                  }}/>
+                  <Route render={() => <h2>This Path Does Not Exist!</h2>}/>
+                </Switch>
             </div>
         )
     }
