@@ -5,9 +5,9 @@ import {NavLink} from 'react-router-dom'
 const movieCard = ({poster_path, title, method, id}) => {
     return (
       <NavLink to={`movies/${id}`}>
-        <div className='single-movie'>
+        <div className='movie-card'>
             <img id={id} className='poster' alt={title} src={poster_path}/>
-            <h3>{title}</h3>
+            <p className={`id-${id}`}>{title}</p>
         </div>
       </NavLink>
     )
