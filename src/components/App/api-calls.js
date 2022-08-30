@@ -4,6 +4,7 @@ const fetchApiData = () => {
         if (!response.ok) {
             throw new Error(response.status + " " + response.statusText)
         } else {
+            console.log(response)
             return response.json()
         }
     })

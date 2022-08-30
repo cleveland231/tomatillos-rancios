@@ -17,12 +17,11 @@ class App extends Component {
         }
     }
 
-
     componentDidMount = () => {
       fetchApiData()
       .then(data => {
           this.setState({movies: data.movies})
-      })
+        })
       .catch(err => console.log(err))
     }
 
