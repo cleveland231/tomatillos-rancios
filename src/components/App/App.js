@@ -33,7 +33,7 @@ class App extends Component {
                   <Route exact path='/' render={() => <MoviesBox movies={this.state.movies}/>}/>
                   <Route exact path='/movies/:id' render={({match}) => {
                     const selectedMovie = this.state.movies.find(movie => movie.id === parseInt(match.params.id))
-                    return <SingleMovie movie={selectedMovie}/>
+                    return <SingleMovie movie={selectedMovie.id}/>
                   }}/>
                   <Route render={() => <h2>This Path Does Not Exist!</h2>}/>
                 </Switch>

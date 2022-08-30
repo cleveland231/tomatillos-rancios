@@ -27,30 +27,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 520px;
   width: 400px;
   border: 1px solid black;
   margin-top: 30%;
   margin-right: 100px;
+  margin-bottom: 75px;
   border-radius: 5px;
 }
 
 .text {
   font-family: 'Times New Roman', Times, serif;
+  border: none;
 }
 
 .home-link {
   color: black;
 }
-/* button {
-  padding: 5px 50px;
-  border-radius: 5px;
-  font-size: medium;
-  background-color: silver;
-  box-shadow: 0 5px 0 gray;
-}
-
-button:active {
-  box-shadow: none;
-  transform: translateY(5px);
-} */
