@@ -3,17 +3,18 @@ import SingleMovie from '../SingleMovie/SingleMovie.js';
 import MoviesBox from '../MoviesBox/MoviesBox';
 import './App.css'
 import '../MoviesBox/MoviesBox.css'
-import fetchApiData from './api-calls';
+import fetchApiData from './fetchApiData';
 import {Route, Switch} from 'react-router-dom'
+import Trailer from '../Trailer/Trailer.js';
+
+let selectedMovie;
 
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            movies: [],
-            singleMovieView: false,
-            selectedMovie: null
+            movies: []
         }
     }
 
@@ -32,9 +33,14 @@ class App extends Component {
                 <Switch>
                   <Route exact path='/' render={() => <MoviesBox movies={this.state.movies}/>}/>
                   <Route exact path='/movies/:id' render={({match}) => {
-                    const selectedMovie = this.state.movies.find(movie => movie.id === parseInt(match.params.id))
-                    return <SingleMovie movie={selectedMovie.id}/>
+                    const selectedMovie1 = this.state.movies.find(movie => movie.id === parseInt(match.params.id))
+                    selectedMovie = selectedMovie1
+                    return <SingleMovie movie={selectedMovie1.id}/>
                   }}/>
+                  <Route exact path='/movies/movies/:id/trailer' render={() => {
+                    return <Trailer id={selectedMovie.id}/>
+                  }}
+                  />
                   <Route render={() => <h2>This Path Does Not Exist!</h2>}/>
                 </Switch>
             </div>

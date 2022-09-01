@@ -17,17 +17,6 @@ describe('Should take user to single movie page', () => {
         .contains('Average Rating: 6.88')
         .get('[class*=movie-details]')
         .contains('Release Date: 2020-09-29')
-
-        cy.get('[class*="home-link active"]').click()
-
-
-        cy.get('[class*=movie-card]').last().click()
-        .get('[class*=movie-details]')
-        .contains('I Still Believe')
-        .get('[class*=movie-details]')
-        .contains('Average Rating: 3.83')
-        .get('[class*=movie-details]')
-        .contains('Release Date: 2020-03-12')
     })
 
     it('Should be able click link to go home', () => {
