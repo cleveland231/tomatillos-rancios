@@ -2,7 +2,7 @@ import React from 'react';
 import './MovieCard.css';
 import {NavLink} from 'react-router-dom'
 
-const movieCard = ({poster_path, title, method, id}) => {
+const movieCard = ({poster_path, title, id}) => {
     return (
       <NavLink to={`movies/${id}`}>
         <div className='movie-card'>

@@ -7,8 +7,6 @@ import fetchApiData from './fetchApiData';
 import {Route, Switch} from 'react-router-dom'
 import Trailer from '../Trailer/Trailer.js';
 
-let selectedMovie;
-
 
 class App extends Component {
     constructor() {
@@ -33,12 +31,12 @@ class App extends Component {
                 <Switch>
                   <Route exact path='/' render={() => <MoviesBox movies={this.state.movies}/>}/>
                   <Route exact path='/movies/:id' render={({match}) => {
-                    const selectedMovie1 = this.state.movies.find(movie => movie.id === parseInt(match.params.id))
-                    selectedMovie = selectedMovie1
-                    return <SingleMovie movie={selectedMovie1.id}/>
+                    let id = parseInt(match.params.id)
+                    return <SingleMovie movie={id}/>
                   }}/>
-                  <Route exact path='/movies/movies/:id/trailer' render={() => {
-                    return <Trailer id={selectedMovie.id}/>
+                  <Route exact path='/movies/:id/trailer' render={({match}) => {
+                    let id = parseInt(match.params.id)
+                    return <Trailer id={id}/>
                   }}
                   />
                   <Route render={() => <h2>This Path Does Not Exist!</h2>}/>
