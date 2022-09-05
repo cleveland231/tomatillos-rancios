@@ -29,7 +29,7 @@ class App extends Component {
             <div className='main'>
                 <h1> 🍅 Bienvenidos a Tomatillos Rancios! 🍅 </h1>
                 <Switch>
-                  <Route exact path='/' render={() => <MoviesBox movies={this.state.movies}/>}/>
+                  <Route path='/tomatillos-rancios' render={() => <MoviesBox movies={this.state.movies}/>}/>
                   <Route exact path='/movies/:id' render={({match}) => {
                     let id = parseInt(match.params.id)
                     return <SingleMovie movie={id}/>

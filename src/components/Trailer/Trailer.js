@@ -28,7 +28,7 @@ class Trailer extends Component {
                 <iframe className='trailer' width="1750" height="1000"
                     src={this.state.url}>
                 </iframe>
-                <NavLink className='home-link' to='/'> Home </NavLink>
+                <NavLink className='home-link' to='/tomatillos-rancios'> Home </NavLink>
             </div>
         )
     }

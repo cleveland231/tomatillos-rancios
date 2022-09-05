@@ -1,10 +1,9 @@
-# tomatillos rancios
+# Tomatillos Rancios
 
 ## Table of Contents
   - [Introduction](#introduction)
   - [Technologies](#technologies)
   - [Features](#features)
-  - [Illustrations](#illustrations)
   - [Deployed Page](#deployed-page)
   - [Possible Future Extensions](#possible-future-extensions)
   - [Set Up](#set-up)
@@ -14,7 +13,9 @@
   - [Project Specs](#project-specs)
 
 ## Introduction
-  - Visit tomatillos rancios to...
+  - Visit Tomatillos Rancios to see a list of movie posters and learn about each movie. If
+    you click on a movie poster you are able to see the average rating, release date, runtime,
+    and an overview for that movie. 
 
 ## Technologies
   - Javascript
@@ -22,16 +23,14 @@
   - CSS
 
 ## Features
--
-
-## Illustrations
--
+- View movie posters
+- Watch trailers
 
 ## Deployed Page
 - Visit our published IdeaBox page []()
 
 ## Possible Future Extensions
-- 
+- Watch a whole movie on Tomatillos Rancios
 
 ## Set Up
 1. Fork this repo  
