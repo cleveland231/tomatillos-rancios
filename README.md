@@ -1,11 +1,9 @@
-# tomatillos rancios
+# Tomatillos Rancios
 
 ## Table of Contents
   - [Introduction](#introduction)
   - [Technologies](#technologies)
   - [Features](#features)
-  - [Illustrations](#illustrations)
-  - [Deployed Page](#deployed-page)
   - [Possible Future Extensions](#possible-future-extensions)
   - [Set Up](#set-up)
   - [Organizational Resources](#organizational-resources)
@@ -14,24 +12,24 @@
   - [Project Specs](#project-specs)
 
 ## Introduction
-  - Visit tomatillos rancios to...
+  - Visit Tomatillos Rancios to see a list of movie posters and learn about each movie. If
+    you click on a movie poster you are able to see the average rating, release date, runtime,
+    and an overview for that movie. 
 
 ## Technologies
   - Javascript
+  - React
+  - Cypress testing
+  - Router
   - HTML
   - CSS
 
 ## Features
--
-
-## Illustrations
--
-
-## Deployed Page
-- Visit our published IdeaBox page []()
+- View movie posters
+- Watch trailers
 
 ## Possible Future Extensions
-- 
+- Watch a whole movie on Tomatillos Rancios
 
 ## Set Up
 1. Fork this repo  
