@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tomatillos-rancios/static/css/main.45551287.css",
+    "main.js": "/tomatillos-rancios/static/js/main.e9cc5cac.js",
+    "index.html": "/tomatillos-rancios/index.html",
+    "main.45551287.css.map": "/tomatillos-rancios/static/css/main.45551287.css.map",
+    "main.e9cc5cac.js.map": "/tomatillos-rancios/static/js/main.e9cc5cac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45551287.css",
+    "static/js/main.e9cc5cac.js"
+  ]
+}
