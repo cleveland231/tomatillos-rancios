@@ -30,11 +30,11 @@ class App extends Component {
                 <h1> 🍅 Bienvenidos a Tomatillos Rancios! 🍅 </h1>
                 <Switch>
                   <Route path='/tomatillos-rancios' render={() => <MoviesBox movies={this.state.movies}/>}/>
-                  <Route exact path='/movies/:id' render={({match}) => {
+                  <Route exact path='/:id' render={({match}) => {
                     let id = parseInt(match.params.id)
                     return <SingleMovie movie={id}/>
                   }}/>
-                  <Route exact path='/movies/:id/trailer' render={({match}) => {
+                  <Route exact path='/:id/trailer' render={({match}) => {
                     let id = parseInt(match.params.id)
                     return <Trailer id={id}/>
                   }}
